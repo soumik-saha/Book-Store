@@ -9,6 +9,10 @@ import ShowBook from "./pages/ShowBook";
 import Register from "./components/Authentication/Register";
 import Login from "./components/Authentication/Login";
 import { AuthProvider } from "./context/AuthContext";
+import CustomerDashboard from "./components/Dashboard/CustomerDashboard";
+import ShopkeeperDashboard from "./components/Dashboard/ShopkeeperDashboard";
+import AdminDashboard from "./components/Dashboard/AdminDashboard";
+import VendorDashboard from "./components/Dashboard/VendorDashboard";
 
 const App = () => {
   return (
@@ -21,6 +25,10 @@ const App = () => {
         <Route path="/books/edit/:id" element={<EditBook />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="dashboard/customer" element={<CustomerDashboard />} />
+        <Route path="dashboard/shopkeeper" element={<ShopkeeperDashboard />} />
+        <Route path="dashboard/admin" element={<AdminDashboard />} />
+        <Route path="dashboard/vendor" element={<VendorDashboard />} />
       </Routes>
     </AuthProvider>
   );

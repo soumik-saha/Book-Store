@@ -1,19 +1,17 @@
-/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null); // Set to null for unauthenticated users
+  const [user, setUser] = useState(null);
 
   const login = (userData) => {
-    // Perform login logic (e.g., API call)
     setUser(userData);
   };
 
   const logout = () => {
-    // Perform logout logic (e.g., clear local storage, invalidate tokens)
     setUser(null);
   };
 

@@ -21,16 +21,18 @@ const userSchema = mongoose.Schema(
             unique: true,
         },
         secretKey: {
-            type: String, 
+            type: String,
             required: true,
         },
         password: {
             type: String,
             required: true,
         },
-        role: {
-            type: String,
-            default: "customer",
+        role: { 
+            type: String, 
+            enum: ['customer', 'shopkeeper', 'admin', 'vendor'], 
+            required: true, 
+            default: 'customer', 
         },
     },
     {
