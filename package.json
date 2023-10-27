@@ -1,0 +1,20 @@
+{
+  "name": "bookstore-mern-stack",
+  "version": "1.0.0",
+  "description": "This is a BookStore project created using MERN Stack.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npm start",
+    "start": "cd frontend && npm install && npm run build && cd ../backend && npm install && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumik-saha/Book-Store.git"
+  },
+  "author": "Soumik Saha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soumik-saha/Book-Store/issues"
+  },
+  "homepage": "https://github.com/soumik-saha/Book-Store#readme"
+}
