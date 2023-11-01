@@ -17,6 +17,9 @@ import CustomerDashboard from "./components/Dashboard/CustomerDashboard";
 import ShopkeeperDashboard from "./components/Dashboard/ShopkeeperDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import VendorDashboard from "./components/Dashboard/VendorDashboard";
+import DeleteUser from './components/Dashboard/Admin/DeleteUser';
+import ShowUser from './components/Dashboard/Admin/ShowUser';
+import EditUser from './components/Dashboard/Admin/EditUser';
 
 const App = () => {
   return (
@@ -31,6 +34,9 @@ const App = () => {
         <Route path="/books/vendor/delete/:id" element={<DeleteBookForVendor />} />
         <Route path="/books/vendor/details/:id" element={<ShowBookForVendor />} />
         <Route path="/books/vendor/edit/:id" element={<EditBookForVendor />} />
+        <Route path="/users/delete/:id" element={<DeleteUser />} />
+        <Route path="/users/details/:id" element={<ShowUser/>} />
+        <Route path="/users/edit/:id" element={<EditUser/>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="dashboard/customer" element={<CustomerDashboard />} />

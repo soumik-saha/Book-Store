@@ -3,6 +3,7 @@ import { PORT, mongoDBURL } from "./config/config.js";
 import mongoose from "mongoose";
 // import { Book } from "./models/bookModel.js";
 import booksRoute from './routes/booksRoute.js';
+import usersRoute from './routes/usersRoute.js';
 import cors from 'cors';
 import flash from 'express-flash';
 import session from 'express-session';
@@ -42,6 +43,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/books', booksRoute);
+app.use('/users', usersRoute);
 app.use('/register', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/protected', protectedRoutes);
