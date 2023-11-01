@@ -38,7 +38,7 @@ app.use(flash());
 
 app.get("/", (req, res) => {
     console.log(req);
-    return res.status(234).send("Welcome to MERN STACK TUTORIAL");
+    return res.status(234).send("Welcome to BOOKSHOP AUTOMATION SYSTEM");
 });
 
 app.use('/books', booksRoute);

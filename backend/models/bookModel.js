@@ -10,10 +10,21 @@ const bookSchema = mongoose.Schema(
             type: String, 
             required: true,
         },
+        genre: {
+            type: String,
+            required: true,
+        },
+        isbn: {
+            type: Number,
+            required: true,
+        },
         publishYear: {
             type: Number,
             required: true,
         },
+        description: {
+            type: String,
+        }
     },
     {
         timestamps: true,

@@ -7,15 +7,18 @@ const router = express.Router();
 // Route for save a new book
 router.post("/", async (req, res) => {
     try {
-        if (!req.body.title || !req.body.author || !req.body.publishYear) {
+        if (!req.body.title || !req.body.author || !req.body.publishYear || !req.body.genre|| !req.body.isbn) {
             return res.status(400).send({
-                message: "Send all required fields: title, author, publishYear",
+                message: "Send all required fields: title, author, genre, isbn, publishYear",
             });
         }
         const newBook = {
             title: req.body.title,
             author: req.body.author,
+            genre: req.body.genre,
+            isbn: req.body.isbn,
             publishYear: req.body.publishYear,
+            description: req.body.description,
         };
 
         const book = await Book.create(newBook);
@@ -62,9 +65,9 @@ router.get('/:id', async (req, res) => {
 // Route for update a book
 router.put('/:id', async (req, res) => {
     try {
-        if (!req.body.title || !req.body.author || !req.body.publishYear) {
+        if (!req.body.title || !req.body.author || !req.body.publishYear || !req.body.genre|| !req.body.isbn) {
             return res.status(400).send({
-                message: "Send all required fields: title, author, publishYear",
+                message: "Send all required fields: title, author, genre, isbn, publishYear",
             });
         }
 
