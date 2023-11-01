@@ -9,6 +9,8 @@ import { useSnackbar } from "notistack";
 const EditBook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
+  const [genre, setGenre] = useState("");
+  const [isbn, setIsbn] = useState("");
   const [publishYear, setPublishYear] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -22,6 +24,8 @@ const EditBook = () => {
       .then((response) => {
         setTitle(response.data.title);
         setAuthor(response.data.author);
+        setGenre(response.data.genre);
+        setIsbn(response.data.isbn);
         setPublishYear(response.data.publishYear);
         setLoading(false);
       })
@@ -38,6 +42,8 @@ const EditBook = () => {
     const data = {
       title,
       author,
+      genre,
+      isbn,
       publishYear,
     };
     setLoading(true);
@@ -77,6 +83,24 @@ const EditBook = () => {
             type="text"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
+            className="border-2 border-gray-500 px-4 py-2 w-full"
+          />
+        </div>
+        <div className="my-4">
+          <label className="text-xl mr-4 text-gray-500">Genre</label>
+          <input
+            type="text"
+            value={genre}
+            onChange={(e) => setGenre(e.target.value)}
+            className="border-2 border-gray-500 px-4 py-2 w-full"
+          />
+        </div>
+        <div className="my-4">
+          <label className="text-xl mr-4 text-gray-500">ISBN</label>
+          <input
+            type="text"
+            value={isbn}
+            onChange={(e) => setIsbn(e.target.value)}
             className="border-2 border-gray-500 px-4 py-2 w-full"
           />
         </div>

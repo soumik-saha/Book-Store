@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
 import { AiOutlineClose } from 'react-icons/ai';
 import { PiBookOpenTextLight } from 'react-icons/pi';
 import { BiUserCircle } from 'react-icons/bi';
+import { FaBook, FaBarcode } from 'react-icons/fa'; // Import the new icons
 
 const BookModal = ({ book, onClose }) => {
   return (
@@ -29,14 +32,23 @@ const BookModal = ({ book, onClose }) => {
           <BiUserCircle className='text-red-300 text-2xl' />
           <h2 className='my-1'>{book.author}</h2>
         </div>
-        <p className='mt-4'>Anything You want to show</p>
+        <div className='flex justify-start items-center gap-x-2'>
+          <FaBook className='text-red-300 text-2xl' />
+          <p className='my-1'>{book.genre}</p>
+        </div>
+        <div className='flex justify-start items-center gap-x-2'>
+          <FaBarcode className='text-red-300 text-2xl' />
+          <p className='my-1'>{book.isbn}</p>
+        </div>
+        <p className='mt-4'><strong>Description:</strong></p>
         <p className='my-2'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia
+          {book.description}
+          {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia
           voluptatum sint. Nisi impedit libero eveniet cum vitae qui expedita
           necessitatibus assumenda laboriosam, facilis iste cumque a pariatur
           nesciunt cupiditate voluptas? Quis atque earum voluptate dolor nisi
           dolorum est? Deserunt placeat cumque quo dicta architecto, dolore
-          vitae voluptate sequi repellat!
+          vitae voluptate sequi repellat! */}
         </p>
       </div>
     </div>

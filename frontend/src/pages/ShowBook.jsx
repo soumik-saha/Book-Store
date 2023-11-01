@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
@@ -22,7 +23,7 @@ const ShowBook = () => {
         console.log(error);
         setLoading(false);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+      
   }, []);
 
     return (
@@ -42,8 +43,16 @@ const ShowBook = () => {
               <span>{book.title}</span>
             </div>
             <div className='my-4'>
-              <span className='text-xl mr-4 text-gray-500'>Autho</span>
+              <span className='text-xl mr-4 text-gray-500'>Author</span>
               <span>{book.author}</span>
+            </div>
+            <div className='my-4'>
+              <span className='text-xl mr-4 text-gray-500'>Genre</span>
+              <span>{book.genre}</span>
+            </div>
+            <div className='my-4'>
+              <span className='text-xl mr-4 text-gray-500'>ISBN</span>
+              <span>{book.isbn}</span>
             </div>
             <div className='my-4'>
               <span className='text-xl mr-4 text-gray-500'>Publish Year</span>

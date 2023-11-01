@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineEdit } from "react-icons/ai";
@@ -13,6 +15,12 @@ const BooksTable = ({ books }) => {
           <th className="border border-state-600 rounded-md">Title</th>
           <th className="border border-state-600 rounded-md max-md:hidden">
             Author
+          </th>
+          <th className="border border-state-600 rounded-md max-md:hidden">
+            Genre
+          </th>
+          <th className="border border-state-600 rounded-md max-md:hidden">
+            ISBN
           </th>
           <th className="border border-state-600 rounded-md max-md:hidden">
             Publish Year
@@ -31,6 +39,12 @@ const BooksTable = ({ books }) => {
             </td>
             <td className="border border-slate-700 rounded-md text-center max-md:hidden">
               {book.author}
+            </td>
+            <td className="border border-slate-700 rounded-md text-center max-md:hidden">
+              {book.genre}
+            </td>
+            <td className="border border-slate-700 rounded-md text-center max-md:hidden">
+              {book.isbn}
             </td>
             <td className="border border-slate-700 rounded-md text-center max-md:hidden">
               {book.publishYear}

@@ -9,6 +9,8 @@ import { useSnackbar } from "notistack";
 const CreateBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [genre, setGenre] = useState('');
+  const [isbn, setIsbn] = useState('');
   const [publishYear, setPublishYear] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -18,6 +20,8 @@ const CreateBook = () => {
     const data = {
       title,
       author,
+      genre,
+      isbn,
       publishYear,
     };
     setLoading(true);
@@ -56,6 +60,24 @@ const CreateBook = () => {
             type="text"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2 w-full'
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>Genre</label>
+          <input 
+            type="text"
+            value={genre}
+            onChange={(e) => setGenre(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2 w-full'
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>isbn</label>
+          <input 
+            type="text"
+            value={isbn}
+            onChange={(e) => setIsbn(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />
         </div>
