@@ -18,7 +18,7 @@ const App = () => {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/books" element={<Home />} />
         <Route path="/books/create" element={<CreateBook />} />
         <Route path="/books/delete/:id" element={<DeleteBook />} />
         <Route path="/books/details/:id" element={<ShowBook />} />

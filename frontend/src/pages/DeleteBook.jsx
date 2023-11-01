@@ -19,7 +19,7 @@ const DeleteBook = () => {
       .then((response) => {
         setLoading(false);
         enqueueSnackbar('Book Deleted Successfully', { variant: 'success' })
-        navigate("/");
+        navigate("/books");
       })
       .catch((error) => {
         setLoading(false);
