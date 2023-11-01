@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
-import BackButton from './../components/BackButton';
-import Spinner from './../components/Spinner';
+import BackButton from './BackButtonForVendor';
+import Spinner from '../../Spinner';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from "notistack";
 
-const CreateBook = () => {
+const CreateBookForVendor = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [genre, setGenre] = useState('');
@@ -30,7 +30,7 @@ const CreateBook = () => {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created Successfully', { variant: 'success' })
-        navigate('/dashboard/shopkeeper');
+        navigate('/dashboard/vendor');
       }).catch((error) => {
         setLoading(false);
         // alert('An error happened. Please check console');
@@ -98,4 +98,4 @@ const CreateBook = () => {
   )
 }
 
-export default CreateBook
+export default CreateBookForVendor

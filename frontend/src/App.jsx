@@ -1,11 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import CreateBook from "./pages/CreateBook";
 import DeleteBook from "./pages/DeleteBook";
 import EditBook from "./pages/EditBook";
 import ShowBook from "./pages/ShowBook";
+import CreateBookForVendor from "./components/Dashboard/Vendor/CreateBookForVendor";
+import DeleteBookForVendor from "./components/Dashboard/Vendor/DeleteBookForVendor";
+import EditBookForVendor from "./components/Dashboard/Vendor/EditBookForVendor";
+import ShowBookForVendor from "./components/Dashboard/Vendor/ShowBookForVendor";
 import Register from "./components/Authentication/Register";
 import Login from "./components/Authentication/Login";
 import { AuthProvider } from "./context/AuthContext";
@@ -18,11 +22,15 @@ const App = () => {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/books" element={<Home />} />
+        {/* <Route path="/books" element={<Home />} /> */}
         <Route path="/books/create" element={<CreateBook />} />
         <Route path="/books/delete/:id" element={<DeleteBook />} />
         <Route path="/books/details/:id" element={<ShowBook />} />
         <Route path="/books/edit/:id" element={<EditBook />} />
+        <Route path="/books/vendor/create" element={<CreateBookForVendor />} />
+        <Route path="/books/vendor/delete/:id" element={<DeleteBookForVendor />} />
+        <Route path="/books/vendor/details/:id" element={<ShowBookForVendor />} />
+        <Route path="/books/vendor/edit/:id" element={<EditBookForVendor />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="dashboard/customer" element={<CustomerDashboard />} />

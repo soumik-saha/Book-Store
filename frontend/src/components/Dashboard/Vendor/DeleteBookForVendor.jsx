@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import BackButton from "../components/BackButton";
-import Spinner from "../components/Spinner";
+import BackButton from './BackButtonForVendor';
+import Spinner from '../../Spinner';
 import { useSnackbar } from "notistack";
 
-const DeleteBook = () => {
+const DeleteBookForVendor = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -19,7 +19,7 @@ const DeleteBook = () => {
       .then((response) => {
         setLoading(false);
         enqueueSnackbar('Book Deleted Successfully', { variant: 'success' })
-        navigate("/dashboard/shopkeeper");
+        navigate("/dashboard/vendor");
       })
       .catch((error) => {
         setLoading(false);
@@ -47,4 +47,4 @@ const DeleteBook = () => {
   );
 };
 
-export default DeleteBook;
+export default DeleteBookForVendor;
