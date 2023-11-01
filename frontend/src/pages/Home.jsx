@@ -22,7 +22,7 @@ class CustomerDashboard extends React.Component {
               StoryTellers
             </a>
           </div>
-          <div className="humberger__menu__cart">
+          {/* <div className="humberger__menu__cart">
             <ul>
               <li>
                 <a href="#">
@@ -38,7 +38,7 @@ class CustomerDashboard extends React.Component {
             <div className="header__cart__price">
               item: <span>₹350.00</span>
             </div>
-          </div>
+          </div> */}
           <div className="humberger__menu__widget">
             <div className="header__top__right__language">
               <img src={img1} alt="" />
@@ -218,7 +218,7 @@ class CustomerDashboard extends React.Component {
                   </ul>
                 </nav>
               </div>
-              <div className="col-lg-3">
+              {/* <div className="col-lg-3">
                 <div className="header__cart">
                   <ul>
                     <li>
@@ -236,7 +236,7 @@ class CustomerDashboard extends React.Component {
                     item: <span>₹350.00</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="humberger__open">
               <i className="fa fa-bars"></i>
