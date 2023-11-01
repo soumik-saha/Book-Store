@@ -20,6 +20,7 @@ import VendorDashboard from "./components/Dashboard/VendorDashboard";
 import DeleteUser from './components/Dashboard/Admin/DeleteUser';
 import ShowUser from './components/Dashboard/Admin/ShowUser';
 import EditUser from './components/Dashboard/Admin/EditUser';
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/users/delete/:id" element={<DeleteUser />} />
         <Route path="/users/details/:id" element={<ShowUser/>} />
         <Route path="/users/edit/:id" element={<EditUser/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="dashboard/customer" element={<CustomerDashboard />} />
